@@ -2,7 +2,7 @@
 data "azuread_client_config" "current" {}
 
 resource "azuread_application" "example" {
-  display_name = "example"
+  display_name = "automation-account"
   owners       = [data.azuread_client_config.current.object_id]
 }
 
